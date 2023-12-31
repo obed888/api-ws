@@ -63,12 +63,12 @@ class WsTransporter extends Client implements LeadExternal {
 
   private generateImage = (base64: string) => {
     const path = `${process.cwd()}/tmp`;
-    let qr_svg = imageQr(base64, { type: "png", margin: 4 });
-    qr_svg.pipe(require("fs").createWriteStream(`${path}/qr.png`));
+    //let qr_svg = imageQr(base64, { type: "png", margin: 4 });
+    //qr_svg.pipe(require("fs").createWriteStream(`${path}/qr.png`));
 
-    qrcode.generate(base64, {small: true});
+    //qrcode.generate(base64, {small: true});
     
-
+    console.log(base64);
     console.log(`⚡ Recuerda que el QR se actualiza cada minuto ⚡'`);
     console.log(`⚡ Actualiza F5 el navegador para mantener el mejor QR⚡`);
   };
