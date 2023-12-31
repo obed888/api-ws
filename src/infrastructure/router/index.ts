@@ -14,6 +14,7 @@ function removeExtension(fileName: string): string {
  * @param file tracks.ts
  */
 function loadRouter(file: string): void {
+
   const name = removeExtension(file);
   if (name !== "index") {
     import(`./${file}`).then((routerModule) => {
